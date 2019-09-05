@@ -40,9 +40,9 @@ class Trip {
       store.trips.push(this);
   }
   driver() {
-    return store.drivers.filter(driver => driver.id === this.driverId)[0];
+    return store.drivers.find(driver => driver.id === this.driverId);
   }
   passenger() {
-    return store.passengers.filter(passenger => passenger.id === this.passengerId)[0];
+    return store.passengers.find(passenger => passenger.id === this.passengerId);
   }
 }
